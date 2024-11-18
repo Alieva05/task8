@@ -1,0 +1,287 @@
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    
+}
+
+.main {
+    flex-direction: column;
+}
+
+.content {
+    max-width: 1560px;
+    padding: 0px;
+    display: flex;
+}
+
+.header {
+
+    background-color: #654321;
+    color: #ffffff;
+    
+}
+.header ul a{
+    color: #ffffff;
+}
+
+.header-content {
+    max-width: 100%;
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+.site-link a{
+    font-size: 20px;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.site-link:hover{
+    color: darkgrey;
+}
+
+.gallery-container {
+    display: flex;
+    align-items: center;
+    position: relative;
+    max-width: 800px; /* Максимальная ширина контейнера */
+    margin: auto; /* Центрирование контейнера */
+}
+
+.gallery {
+    display: flex;
+    overflow: hidden;
+    width: 100%;
+}
+
+.slides {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.slide {
+    min-width: 33.33%; /* Показать 3 изображения одновременно */
+    box-sizing: border-box; /* Чтобы не было лишних отступов */
+    border-right: 10px solid #ccc; /* Граница справа от каждого слайда */
+}
+
+.slide:last-child {
+    border-right: none;
+}
+
+.slide img {
+    width: 100%; /* Изображение занимает 100% от контейнера */
+    height: 200px; /* Фиксированная высота для всех изображений */
+    object-fit: cover; /* Обеспечивает обрезку изображения при изменении размеров */
+}
+
+.arrow {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 2em;
+    z-index: 1;
+}
+
+.pager {
+    text-align: center;
+    margin-top: 10px;
+}
+
+
+.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    border: solid 3px #654321;
+}
+
+.data-table th, .data-table td {
+    text-align: left;
+    border: solid 1px #654321;
+}
+
+.data-table th {
+    background-color: #c0c0c0;
+    color: black;
+}
+
+.data-table tr:nth-child(even) {
+    background-color: #c0c0c0;
+}
+.nav {
+    color: #ffffff;
+}
+.footer {
+    background-color: #598234;
+    color: #fff;
+    text-align: center;
+    
+}
+form{
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.footer-content {
+    max-width: 960px;
+
+}
+.calc {
+    border: 1px solid #4e3030;
+    border-radius: 5px;
+}
+
+.popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+#agreement{
+    display: block;
+}
+.popup-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    max-width: 400px; /* Ширина формы */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    position: relative; /* Добавляем относительное позиционирование */
+}
+
+.popup-content h2 {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.popup-content label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.popup-content input,
+.popup-content textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.popup-content textarea {
+    height: 100px;
+}
+
+.popup-content button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.popup-content button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.popup-content .error {
+    color: red;
+    margin-bottom: 10px;
+}
+
+.popup-content .message {
+    margin-top: 15px;
+    text-align: center;
+}
+
+.close-button {
+    margin: 0 0 0 auto;
+      top: 10px;
+      right: 10px;
+      background: transparent;
+      border: none;
+      cursor: pointer;
+      font-size: 20px;
+}
+
+.close-button:hover {
+      color: red;
+ }
+@media (min-width:769px) {
+    .main-menu ul {
+        list-style-type: none;
+        display: flex;
+    }
+    .main-menu a {
+        font-size: 20px;
+        color:whitesmoke;
+        text-decoration: none;
+    }
+    
+    .main-menu a:hover{
+        color: darkgrey;
+    }
+    .logo{
+        background-color: #654321;
+    }
+
+    .logo img {
+        display: flex;
+        width:100px;
+    }
+    
+    
+}
+@media (max-width: 768px) {
+
+    .main-menu ul {
+        list-style-type: none;
+        display: flex;
+    }
+    .main-menu a {
+        font-size: 20px;
+        color:whitesmoke;
+        text-decoration: none;
+    }
+
+    .main-menu a:hover{
+        color: darkgrey;
+    }
+    
+    .logo img{
+        width: 50px;
+
+    }
+
+    .content{
+        order:-1;
+    }
+
+    .sslk{
+        order:1;
+    }
+    .calc{
+        order: 0;
+    }
+
+    .slide {
+        border-right: none; /* Убираем границу для мобильных устройств */
+        min-width: 100%; /* На мобильных устройствах показываем 1 изображение */
+    }
+    .popup-content {
+        max-width: 90%;
+      }
+}
